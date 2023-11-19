@@ -15,8 +15,10 @@
     
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
-                <h2 class="text-center">Player One</h2>                
+            <div class="col-md-3 text-center player one">
+                <h2>Player One</h2>  
+                <span class="simple">X</span>
+                <span class="status"></span>             
             </div>
             <div class="col-md-6">
                 <div class="game-board">
@@ -31,13 +33,16 @@
                     <div class="box"></div>
                   </div>
             </div>
-            <div class="col-md-3">
-                <h2 class="text-center">Player Two</h2>    
+            <div class="col-md-3 text-center player two">
+                <h2>Player Two</h2>
+                <span class="simple">O</span> 
+                <span class="status"></span>
             </div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/game.js"></script>
+    <script src="js/player.js"></script>
   </body> 
 </html>

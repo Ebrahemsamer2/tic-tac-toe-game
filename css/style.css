@@ -23,3 +23,18 @@
   justify-content: center;
   align-items: center;
 }
+
+.box:hover 
+{
+    cursor: pointer;
+    background-color: #5d7b98;
+}
+
+span {
+    font-weight: bold;
+    font-size: 4em;
+} 
+
+span.status {
+    color: rgb(103, 168, 103);
+}
