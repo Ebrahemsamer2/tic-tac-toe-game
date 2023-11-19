@@ -37,4 +37,5 @@ span {
 
 span.status {
     color: rgb(103, 168, 103);
+    font-size: 5em;
 }
