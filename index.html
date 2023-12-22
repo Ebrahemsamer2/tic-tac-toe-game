@@ -41,6 +41,57 @@
         </div>
     </div>
 
+    <div class="modal fade" id="game-settings" tabindex="-1" aria-labelledby="gameSettingsModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="gameSettingsModal">Game Settings</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" value="2" type="radio" name="playerType" id="flexRadioDefault1" checked>
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Two Players
+                  </label>
+                </div>
+                <div class="row players-settings-form">
+                  <div class="col-auto">
+                    <input class="form-control" value="Player One" type="text" name="player1_name" id="player1_name">
+                  </div>
+                  <div class="col-auto">
+                    <input class="form-control" value="Player Two" type="text" name="player2_name" id="player2_name">
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" value="1" type="radio" name="playerType" id="flexRadioDefault2">
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    VS Computer
+                  </label>
+                </div>
+                <div class="row d-none computer-settings-form">
+                  <div class="col-auto">
+                    <input class="form-control" value="Player One" type="text" name="player_vs_computer_name" id="player_vs_computer_name">
+                  </div>
+                  <div class="col-auto">
+                    <input class="form-control" readonly value="Computer" type="text" name="computer_name" id="computer_name">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="game-settings-done-btn" class="btn btn-primary">Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/game.js"></script>
     <script src="js/player.js"></script>
