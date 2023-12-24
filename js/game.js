@@ -6,6 +6,7 @@ let game = {
         1: {},
     },
     playerType: 2,
+    level: 'easy',
     player1: 'Player One',
     player2: 'Player Two',
     winningMaps: [
@@ -74,21 +75,16 @@ let game = {
             }
 
             player.play(target, () => {
-                let moveIndex = $(target).index();
-                game.storeMove(moveIndex);
-                
-                if(!game.checkWinner())
+                if(game.playerType == 1)
                 {
-                    game.switchPlayers();
-                } else {
-                    game.announcePlayer();
+                    player.playAsComputer();
                 }
             });
         });
 
         $("input[name='playerType']").on('change', (e) => {
             let playerType = $("input[name='playerType']:checked").val();
-            console.log(playerType)
+            game.playerType = playerType;
             if(playerType == 2)
             {
                 $(".computer-settings-form").addClass('d-none');
@@ -108,6 +104,7 @@ let game = {
             } else {
                 game.player1 = $("#player_vs_computer_name").val();
                 game.player2 = $("#computer_name").val();
+                game.level = $("input[name='gameLevel']:checked").val();
             }
             $(".player.one > h2").text(game.player1);
             $(".player.two > h2").text(game.player2);
